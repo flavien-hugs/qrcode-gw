@@ -31,7 +31,7 @@ freeze: ## Pin current dependencies with pipenv
 
 .PHONY: test
 test: ## Run tests
-	flake8
+	flake8 --statistics
 
 .PHONY: start
 start: ## Run the script
