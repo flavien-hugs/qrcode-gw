@@ -11,10 +11,10 @@ Usage
 From the command line, make instruction:
     - git clone https://github.com/flavien-hugs/qrcode-generator-website/
     - cd qrcode-generator-website
-    - run ``pipenv --three`` for create new virtual environment
-    - run ``pipenv shell`` for activate virtual environment
-    - run ``pipenv install`` for installed dependencies
-    - use ``python make_qrcode.py`` to run script
+    - run ``make help`` to display all make commands
+    - run ``make venv`` for create a new virtual environment with pipenv
+    - run ``make install`` for install requirements in virtual environment
+    - use ``make start`` to run script
 
 Output
 ======
