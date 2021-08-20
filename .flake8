@@ -1,0 +1,16 @@
+[flake8]
+max-line-length = 100
+select = C,E,F,W,B,B950
+exclude = .git, */img/*
+ignore = E126, E203, E501, W503, E302
+
+[isort]
+profile = black
+src_paths = qrcode
+
+[coverage:report]
+fail_under = 100
+omit =
+    */img/*
+show_missing = True
+skip_covered = True
