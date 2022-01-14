@@ -2,6 +2,8 @@
 
 import qrcode as qr
 from qrcode.constants import ERROR_CORRECT_H
+from qrcode.image.styledpil import StyledPilImage
+from qrcode.image.styles.moduledrawers import RoundedModuleDrawer
 
 
 def make_qrcode(website_url):
@@ -12,6 +14,9 @@ def make_qrcode(website_url):
     )
     qrc.add_data(website_url)
     qrc.make(fit=True)
-    img = qrc.make_image(fill_color="blue", back_color="white")
-
+    img = qrc.make_image(
+        image_factory=StyledPilImage,
+        module_drawer=RoundedModuleDrawer(),
+        embeded_image_path="favicon.png"
+    )
     return img.save('img/qrcode.png')
