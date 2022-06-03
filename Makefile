@@ -27,7 +27,7 @@ install: venv ## Install or update dependencies with pipenv
 	pipenv install
 
 freeze: ## Pin current dependencies with pipenv
-	pipenv lock -r > requirements.txt
+	pipenv run pip freeze > requirements.in
 
 .PHONY: test
 test: ## Run tests
